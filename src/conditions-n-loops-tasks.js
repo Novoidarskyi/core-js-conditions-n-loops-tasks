@@ -122,8 +122,131 @@ function isIsoscelesTriangle(a, b, c) {
  *  10  => X
  *  26  => XXVI
  */
-function convertToRomanNumerals(/* num */) {
-  throw new Error('Not implemented');
+function convertToRomanNumerals(num) {
+  let romanNumeral;
+  switch (num) {
+    case 1:
+      romanNumeral = 'I';
+      break;
+    case 2:
+      romanNumeral = 'II';
+      break;
+    case 3:
+      romanNumeral = 'III';
+      break;
+    case 4:
+      romanNumeral = 'IV';
+      break;
+    case 5:
+      romanNumeral = 'V';
+      break;
+    case 6:
+      romanNumeral = 'VI';
+      break;
+    case 7:
+      romanNumeral = 'VII';
+      break;
+    case 8:
+      romanNumeral = 'VIII';
+      break;
+    case 9:
+      romanNumeral = 'IX';
+      break;
+    case 10:
+      romanNumeral = 'X';
+      break;
+    case 11:
+      romanNumeral = 'XI';
+      break;
+    case 12:
+      romanNumeral = 'XII';
+      break;
+    case 13:
+      romanNumeral = 'XIII';
+      break;
+    case 14:
+      romanNumeral = 'XIV';
+      break;
+    case 15:
+      romanNumeral = 'XV';
+      break;
+    case 16:
+      romanNumeral = 'XVI';
+      break;
+    case 17:
+      romanNumeral = 'XVII';
+      break;
+    case 18:
+      romanNumeral = 'XVIII';
+      break;
+    case 19:
+      romanNumeral = 'XIX';
+      break;
+    case 20:
+      romanNumeral = 'XX';
+      break;
+    case 21:
+      romanNumeral = 'XXI';
+      break;
+    case 22:
+      romanNumeral = 'XXII';
+      break;
+    case 23:
+      romanNumeral = 'XXIII';
+      break;
+    case 24:
+      romanNumeral = 'XXIV';
+      break;
+    case 25:
+      romanNumeral = 'XXV';
+      break;
+    case 26:
+      romanNumeral = 'XXVI';
+      break;
+    case 27:
+      romanNumeral = 'XXVII';
+      break;
+    case 28:
+      romanNumeral = 'XXVIII';
+      break;
+    case 29:
+      romanNumeral = 'XXIX';
+      break;
+    case 300:
+      romanNumeral = 'XXX';
+      break;
+    case 31:
+      romanNumeral = 'XXXI';
+      break;
+    case 32:
+      romanNumeral = 'XXXII';
+      break;
+    case 33:
+      romanNumeral = 'XXXIII';
+      break;
+    case 34:
+      romanNumeral = 'XXXIV';
+      break;
+    case 35:
+      romanNumeral = 'XXXV';
+      break;
+    case 36:
+      romanNumeral = 'XXXVI';
+      break;
+    case 37:
+      romanNumeral = 'XXXVII';
+      break;
+    case 38:
+      romanNumeral = 'XXXVIII';
+      break;
+    case 39:
+      romanNumeral = 'XXXIX';
+      break;
+
+    default:
+      romanNumeral = 0;
+  }
+  return romanNumeral;
 }
 
 /**
@@ -141,8 +264,71 @@ function convertToRomanNumerals(/* num */) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(/* numberStr */) {
-  throw new Error('Not implemented');
+function convertNumberToString(numberStr) {
+  let value = '';
+  let result = '';
+
+  for (let i = 0; i < numberStr.length; i += 1) {
+    switch (numberStr[i]) {
+      case '1':
+        value += 'one ';
+        break;
+
+      case '2':
+        value += 'two ';
+        break;
+
+      case '3':
+        value += 'three ';
+        break;
+
+      case '4':
+        value += 'four ';
+        break;
+
+      case '5':
+        value += 'five ';
+        break;
+
+      case '6':
+        value += 'six ';
+        break;
+
+      case '7':
+        value += 'seven ';
+        break;
+
+      case '8':
+        value += 'eight ';
+        break;
+
+      case '9':
+        value += 'nine ';
+        break;
+
+      case '-':
+        value += 'minus ';
+        break;
+
+      case ',':
+        value += 'point ';
+        break;
+
+      case '.':
+        value += 'point ';
+        break;
+
+      default:
+        value += 'zero ';
+        break;
+    }
+  }
+
+  for (let i = 0; i < value.length - 1; i += 1) {
+    result += value[i];
+  }
+
+  return result;
 }
 
 /**
